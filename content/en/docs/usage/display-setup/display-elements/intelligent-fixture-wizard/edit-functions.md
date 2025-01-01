@@ -13,7 +13,7 @@ weight: 20
 ### Background
 
 This wizard page (**Edit Functions**) and the **Edit Channels** wizard page define the majority of the fixture.
-Vixen comes with a number of built in functions to make this data entry task easier.
+Vixen comes with several built-in functions to make this data entry task easier.
 This page defines the functions that will be assigned to channels on the next wizard page (**Edit Channels**).
 The name of each function needs to be unique.
 Note the names of the predefined functions can be changed to better match your fixture's user manual.
@@ -22,12 +22,12 @@ Note the names of the predefined functions can be changed to better match your f
 
 ### What is a Tag?
 
-The Vixen Intelligent Fixture support was designed to allow users to input their fixture channel map information in verbatim.
-There are areas of the Vixen Intelligent Fixture support where Vixen needs to know what certain fixture function do.
-These areas include the Preview, Effects and automating the handling of certain functions like shutter.
+The Vixen Intelligent Fixture support was designed to allow users to input their fixture channel map information verbatim.
+There are areas of the Vixen Intelligent Fixture support where Vixen needs to know what certain fixture functions do.
+These areas include the Preview, Effects, and automating the handling of certain functions like shutter.
 The Fixture Profile uses a tag to give the software the necessary knowledge about the functions.
 There is tagging at the function level but there is also tagging for index values.
-Many of the built in functions are already assigned a tag.
+Many of the built-in functions are already assigned a tag.
 
 ---
 
@@ -47,7 +47,7 @@ Some of the functions require additional details which appear in the details pan
   2. Give the function a unique name.
   3. Assign the function a type (_**Range, Indexed, Color Wheel, RGB Color, RGBW Color, None**_).
   4. (Optionally) assign a Preview Legend.
-     The preview legend is displayed below the fixture with corresponding DMX value assigned to the channel.
+     The preview legend is displayed below the fixture with the corresponding DMX value assigned to the channel.
      This feature can be useful for debugging problems.
   5. Optionally assign a **Tag** to the function.
      See _'What is a Tag'_' section above for more information.
@@ -56,11 +56,11 @@ Some of the functions require additional details which appear in the details pan
 
 ### Assigning Function Details
 
-There are twelve built in functions.
-The following sections describe each built in function and what configuration is still required.
+There are twelve built-in functions.
+The following sections describe each built-in function and what configuration is still required.
 The functions in the fixture profile are NOT ordered.  If your fixture does not support one of these
-built in functions there is no harm in leaving them in the profile.  If there is any doubt if a function might 
-be applicable to your fixture leave it in the list to save data entry.  These built-in functions are properly tagged
+built-in functions there is no harm in leaving them in the profile.  If there is any doubt if a function might 
+apply to your fixture leave it in the list to save data entry.  These built-in functions are properly tagged
 to maximize support with the Vixen Intelligent Fixture sequencing effects.
 
 * **Pan Function** - Input the range of motion the fixture supports when panning.
@@ -78,7 +78,7 @@ to maximize support with the Vixen Intelligent Fixture sequencing effects.
 ---
 
 * **Color Wheel** - Defines the colors that the fixture supports.
-                    This function may not be applicable to color mixing fixtures.
+                    This function may not be applicable to color-mixing fixtures.
 
   1. Select the Plus ![Plus](/images/docs/usage/display-setup/display-elements/intelligent-fixture-wizard/Plus.png) button to add a new color wheel entry.
   2. Enter a unique name for the color wheel entry.
@@ -86,8 +86,8 @@ to maximize support with the Vixen Intelligent Fixture sequencing effects.
   4. Enter the DMX stop value for the color.
   5. (Optionally) select if the entry should be controlled via a curve.
      Example: select **Use Curve** when the manual shows a range of DMX values that spin the color wheel.
-  6. (Optionally) select the **Half Stop** option if the entry is half way between two colors on the color wheel.
-     Note the colors will automatically populated for this entry.
+  6. (Optionally) Select the **Half Stop** option if the entry is halfway between two colors on the color wheel.
+     Note the colors will automatically be populated for this entry.
   7. Select the **...** button to assign the color.
   8. Select the **Exclude Color Property** option to exclude the color entry from the color property associated with the element.
      This option should be selected for colors like CTB and UV.
@@ -105,7 +105,7 @@ to maximize support with the Vixen Intelligent Fixture sequencing effects.
   3. Optionally select **Use Curve** for entries that define a strobing rate.
   4. Enter the DMX start value for the index entry.
   5. Enter the DMX stop value for the index entry.
-  6. Tag the entry if the entry open or closes the shutter.
+  6. Tag the entry if the entry opens or closes the shutter.
      This tagging allows Vixen to automatically control the shutter when color is applied to the fixture.
 
 ---
@@ -113,33 +113,33 @@ to maximize support with the Vixen Intelligent Fixture sequencing effects.
 * **Gobo Function** - Defines a function for selecting gobos.
 
   1. Select the Plus ![Plus](/images/docs/usage/display-setup/display-elements/intelligent-fixture-wizard/Plus.png) button to add a new gobo entry.
-  2. Enter a unique name for the gobo entry.
+  2. Enter a unique name for the Gobo entry.
   3. Optionally select the **Use Curve** for entries that spin the gobo wheel or define a range where the user should select a specific value.
   4. Enter the DMX start value for the gobo entry.
   5. Enter the DMX stop value for the gobo entry.
-  6. Optionally select an Image for the gobo entry.
-     The image is displayed on the timeline for Gobo effect.
+  6. Optionally select an Image for the Gobo entry.
+     The image is displayed on the timeline for the Gobo effect.
      Gobo images are stored in the Vixen profile at \Fixtures\Images\.
      Select the **Import Gobo Images** button to copy images to this folder.
 
 ---
 
 * **Open Close Prism Function** - This fixture function may not be mainstream but is similar to a shutter function in that it applies a prism or removes the prism.
-For fixtures that support this function it is typical to have one index entry that applies the prism and another entry to remove the prism.
+For fixtures that support this function, it is typical to have one index entry that applies the prism and another entry to remove the prism.
 If the entries are tagged Vixen will automatically apply the prism if a prism is selected via another function.
 
   * The entry that applies the prism should be tagged **Prism Open**.
-  * The entry that remove the prism should be tagged **Prism Close**.
+  * The entry that removes the prism should be tagged **Prism Close**.
 
-  **Associated Prism Function** - This drop down allows the user to select the associated Prism function that is being opened and closed.
+  **Associated Prism Function** - This drop-down menu allows the user to select the associated Prism function that is being opened and closed.
   This field is critical when the fixture contains more than one prism function that can be opened and closed.
 
 ---
 
-* **Prism Function** - Defines a function for placing a prism into the beam of light.
+* **Prism Function** - Defines a function for placing a prism into the light beam.
 
   1. Select the Plus ![Plus](/images/docs/usage/display-setup/display-elements/intelligent-fixture-wizard/Plus.png) button to add a new prism entry.
-  2. Optionally select the **Use Curve** for entries define a range where the user should select a specific value within that range.
+  2. Optionally select the **Use Curve** for entries to define a range where the user should select a specific value within that range.
      This entry will be edited using a curve in effects.
   3. Enter the DMX start value for the prism entry.
   4. Enter the DMX stop value for the prism entry.
@@ -149,7 +149,7 @@ If the entries are tagged Vixen will automatically apply the prism if a prism is
 ---
 
 * **Frost Function** - Defines a function that places a frost lens in the beam of light.
-                       This function is a range function and does require any further configuration.
+                       This function is a range function and does not require any further configuration.
 
 ---
 
